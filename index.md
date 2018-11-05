@@ -73,7 +73,9 @@ int main(int argc, char**argv)
 
 ### Troca Regiões
 
-O código do programa troca regiões é dado a seguir.
+O segundo exercício da atividade 2 consistia em dividir uma imagem em quatro partes de tamanhos iguais e em seguida permutar os quadrantes na diagonal, ou seja, o primeiro com o quarto e o segundo com o terceiro. Para isso, utilizamos propriedades da classe "Mat".
+O código do programa que executa esse procedimento é dado à seguir:
+
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -98,7 +100,7 @@ int main(int argc, char**argv)
 
     //regiao superior esquerda = primeiro quadrante
     //regiao superior direita = segundo quadrante
-    //regiao infeior esquerda = terceiro quadrate
+    //regiao inferior esquerda = terceiro quadrate
     //regiao inferior direita = quarto quadrante
     for(int i = 0 ; i < image.rows/2 ; i++){
         for(int j = 0 ; j < image.rols/2 ; j++){
