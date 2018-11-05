@@ -11,6 +11,7 @@ Este primeiro exercício consistia em aprender os conceitos aprendidos sobre man
 
 O código do programa que realiza a operação é dado a seguir.
 `css
+
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -25,7 +26,7 @@ int main(int argc, char**argv)
 {
     Mat image;  // variavel que recebera a imagem
     struct ponto p1, p2; //pontos que serao recebidos
-
+    
     image = imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE); //carrega a imagem em tons de cinza
     if(!image.data) {
         cout << "Erro ao carregar a imagem." << endl;
