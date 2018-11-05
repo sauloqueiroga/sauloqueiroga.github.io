@@ -1,4 +1,4 @@
-#Processamento Digitais de Imagens
+#                                            Processamento Digitais de Imagens
 
 ## Atividade 1
 
