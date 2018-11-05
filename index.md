@@ -1,8 +1,10 @@
 #                                            Processamento Digitais de Imagens
 
-## Atividade 1
+## Atividade 2
 
 ### Regions
+
+O código do programa que realiza a operação é dado a seguir.
 ```sh
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -118,15 +120,11 @@ int main(int argc, char**argv)
 
 
 
-## Atividade 2
-
+## Atividade 3
 
 ### Labeling
 
-
-
-Código da atividade 2.
-
+Código do programa.
 ```sh
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -152,21 +150,18 @@ int main(int argc, char **argv){
 			p.y = i;
 			floodFill(image,p,0); // pinta as bolhas de preto na lateral esquerda
 		}
-        
 		if(image.at<uchar>(i,image.cols - 1) == 255){
 			p.x = image.cols - 1;
 			p.y = i;
 			floodFill(image,p,0); // pinta as bolhas de preto na lateral direita
 		}
 	}
-    
 	for(int i=0; i<image.cols; i++){
 		if(image.at<uchar>(0,i) == 255){
 			p.x = i;
 			p.y = 0;
 			floodFill(image,p,0);   // pinta as bolhas de preto na borda superior
 		}
-        
 		if(image.at<uchar>(image.rows - 1, i) == 255){
 			p.x = i;
 			p.y = image.rows - 1;
@@ -202,12 +197,101 @@ int main(int argc, char **argv){
   return 0;
 }
 ```
-## Atividade 3
-```sh
+O programa usa a os tons disponíveis de cinza para contar a quantidade de bolhas. Como há somente 255 tons, ocorrerá uma redundância nas contagem em caso haver mais de 255 bolhas. Uma solução seria ampliar a resolução, isto é, aumentar a quantidade de tons de cinza. Outra solução é usar uma imagem colorida ao invés de em tons de cinza.
 
-```
+
+
 ## Atividade 4
-```sh
 
+### Equalize
+
+Código do programa.
+
+```sh
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char** argv){
+
+  Mat image_antes, image_depois; //imagem antes e depois de equalizada
+
+  int width, height;
+  VideoCapture cap;
+  int nbins = 64;
+  float range[] = {0, 256};
+  const float *histrange = { range };
+
+  Mat hist_antes, hist_depois;  //onde serao armazenados os histogramas
+
+  bool uniform = true;
+  bool acummulate = false;
+
+  cap.open(0);
+
+  if(!cap.isOpened()){
+    cout << "cameras indisponiveis";
+    return -1;
+  }
+
+  width  = cap.get(CV_CAP_PROP_FRAME_WIDTH);
+  height = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
+
+  cout << "largura = " << width << endl;
+  cout << "altura  = " << height << endl;
+
+  int histw = nbins, histh = nbins/2;
+  Mat histImgA(histh, histw, CV_8UC3, Scalar(0,0,0));
+  Mat histImgD(histh, histw, CV_8UC3, Scalar(0,0,0));
+
+  while(1){
+    cap >> image_antes;
+
+    cvtColor(image_antes,image_antes,CV_BGR2GRAY); //converte a imagem para tons de cinza
+
+    equalizeHist(image, image_depois); //equaliza a imagem
+
+
+    //calcula os histogramas da imagem equalizda e da original
+    calcHist(&image_antes, 1, 0, Mat(), hist_antes, 1,
+             &nbins, &histrange,
+             uniform, acummulate);
+    calcHist(&image_depois, 1, 0, Mat(), hist_depois, 1,
+             &nbins, &histrange,
+             uniform, acummulate);
+    //normaliza o histograma da imagem equalizada e o hisograma da original
+    normalize(hist_antes, hist_antes, 0, histImgA.rows, NORM_MINMAX, -1, Mat());
+    normalize(hist_depois, hist_depois, 0, histImgD.rows, NORM_MINMAX, -1, Mat());
+
+    //zera as imagens dos histogramas
+    histImgA.setTo(Scalar(0));
+    histImgD.setTo(Scalar(0));
+
+
+    for(int i=0; i<nbins; i++){
+      //desenha o histograma da imagem original
+      line(histImgA,
+           Point(i, histh),
+           Point(i, histh-cvRound(hist_antes.at<float>(i))),
+           Scalar(0, 0, 255), 1, 8, 0);
+
+      //desenha o histograma da imagem equalizada
+      line(histImgD,
+           Point(i, histh),
+           Point(i, histh-cvRound(hist_depois.at<float>(i))),
+           Scalar(0, 255, 0), 1, 8, 0);
+
+    }
+    histImgA.copyTo(image_antes(Rect(0, 0       ,nbins, histh)));
+    histImgD.copyTo(image_depois(Rect(0, histh   ,nbins, histh)));
+
+    imshow("antes", image_antes);
+    imshow("depois", image_depois);
+    if(waitKey(30) >= 0) break;
+  }
+  return 0;
+}
 ```
 
