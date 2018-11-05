@@ -1,8 +1,13 @@
-#                                            Processamento Digitais de Imagens
+# Processamento Digitais de Imagens
+
+## Introdução
+
+Está página consiste em reponder os questiónarios propostos ao decorrer do componente curricular de processamento digital de imagens (PDI). Tais atividades consistem em fixar o conteúdo aprendido em sala e colocar as técnicas adiquiridas em prática.
 
 ## Atividade 2
 
 ### Regions
+Este primeiro exercício consistia em aprender os conceitos aprendidos sobre manipulação de pixels em uma imagem. Foi proposto que fosse implementado um programa chamdo regions.cpp. Esse programa deveria solicitar ao usuário as coordenadas de dois pontos P1 e P2, os quais são pontos opostos de um retângulo, localizados dentro dos limites do tamanho da imagem e fazer o negativo dessa imagem. 
 
 O código do programa que realiza a operação é dado a seguir.
 ```sh
