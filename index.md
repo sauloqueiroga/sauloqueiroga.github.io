@@ -129,9 +129,11 @@ int main(int argc, char**argv)
 
 ## Atividade 3
 
+O programa usa a os tons disponíveis de cinza para contar a quantidade de bolhas. Como há somente 255 tons, ocorrerá uma redundância nas contagem em caso haver mais de 255 bolhas. Uma solução seria ampliar a resolução, isto é, aumentar a quantidade de tons de cinza. Outra solução é usar uma imagem colorida ao invés de em tons de cinza.
+
 ### Labeling
 
-Código do programa.
+Código do programa:
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -204,8 +206,6 @@ int main(int argc, char **argv){
   return 0;
 }
 ```
-O programa usa a os tons disponíveis de cinza para contar a quantidade de bolhas. Como há somente 255 tons, ocorrerá uma redundância nas contagem em caso haver mais de 255 bolhas. Uma solução seria ampliar a resolução, isto é, aumentar a quantidade de tons de cinza. Outra solução é usar uma imagem colorida ao invés de em tons de cinza.
-
 
 
 ## Atividade 4
