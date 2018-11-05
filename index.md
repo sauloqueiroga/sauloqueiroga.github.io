@@ -24,6 +24,7 @@ int main(int argc, char**argv)
         cout << "Erro ao carregar a imagem." << endl;
         return 0;
     }
+    
     imshow("janela", image); // mostra a imagem na janela "janela"
     waitKey();
 
@@ -63,7 +64,8 @@ int main(int argc, char**argv)
 }
 ```
 
-###Troca Regiões
+### Troca Regiões
+
 O código do programa troca regiões é dado da a seguir.
 ```sh
 #include <iostream>
@@ -82,6 +84,7 @@ int main(int argc, char**argv)
         cout << "Erro ao carregar a imagem." << endl;
         return 0;
     }
+    
     imshow("janela", image); // mostra a imagem na janela "janela"
     waitKey();
 
