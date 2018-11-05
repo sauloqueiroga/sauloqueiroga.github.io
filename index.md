@@ -27,7 +27,7 @@ int main(int argc, char**argv)
     struct ponto p1, p2; //pontos que serao recebidos
 
     image = imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE); //carrega a imagem em tons de cinza
-    if(!image.data){
+    if(!image.data) {
         cout << "Erro ao carregar a imagem." << endl;
         return 0;
     }
