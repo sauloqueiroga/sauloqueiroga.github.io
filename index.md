@@ -1,6 +1,8 @@
-# Atividade 1
+#Processamento Digitais de Imagens
 
-## Regions
+## Atividade 1
+
+### Regions
 ```sh
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -61,10 +63,66 @@ int main(int argc, char**argv)
 }
 ```
 
-# Atividade 2
+###Troca Regiões
+O código do programa troca regiões é dado da a seguir.
+```sh
+#include <iostream>
+#include <opencv2/opencv.hpp>
 
-# Atividade 3
+using namespace cv;
+using namespace std;
 
-# Atividade 4
+int main(int argc, char**argv)
+{
+    Mat image;  // variavel que recebera a imagem
+    uchar auxiliar;
 
+    image = imread("biel.png", CV_LOAD_IMAGE_GRAYSCALE); //carrega a imagem em tons de cinza
+    if(!image.data){
+        cout << "Erro ao carregar a imagem." << endl;
+        return 0;
+    }
+    imshow("janela", image); // mostra a imagem na janela "janela"
+    waitKey();
+
+
+    //regiao superior esquerda = primeiro quadrante
+    //regiao superior direita = segundo quadrante
+    //regiao infeior esquerda = terceiro quadrate
+    //regiao inferior direita = quarto quadrante
+    for(int i = 0 ; i < image.rows/2 ; i++){
+        for(int j = 0 ; j < image.rols/2 ; j++){
+            auxiliar = image.at<uchar>(i,j);                                            //guarda o valor do pixel atual do primeiro quadrante
+            image.at<uchar>(i,j) = image.at<uchar>(i + image.rows/2, j + image.cols/2); //passa o valor do pixel correspondente do quarto quadrante para o do primeiquadrante
+            image.at<uchar>(i + image.rows/2, j + image.cols/2) = aux;                  //o pixel do quarto quadrante recebe o valor da variavel auxiliar (valor do pixel do primeiro quadrante)
+
+
+
+    for(int i = image.rows/2 ; i < image.rows ; i++){
+        for(int j = 0 ; j < image.rols/2 ; j++){
+            auxiliar = image.at<uchar>(i,j);                                            //guarda o valor do pixel atual do terceiro quadrante
+            image.at<uchar>(i,j) = image.at<uchar>(i - image.rows/2, j + image.cols/2); //passa o valor do pixel correspondente do segundo quadrante para o do terceiro
+            image.at<uchar>(i - image.rows/2, j + image.cols/2) = auxiliar;             //o pixel do segundo quadrante recebe o valor da variavel auxiliar (valor do pixel do terceiro quadrante)
+
+    }
+
+
+    imshow("janela", image); // mostra a imagem alterada na janela;
+    waitKey();
+    return 0;
+}
+```
+
+## Atividade 2
+```sh
+
+```
+## Atividade 3
+```sh
+
+```
+## Atividade 4
+```sh
+
+```
 
