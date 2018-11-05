@@ -122,7 +122,7 @@ int main(int argc, char**argv)
 
 
 
-Código da aividade 2.
+Código da atividade 2.
 
 ```sh
 #include <iostream>
