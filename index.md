@@ -10,7 +10,7 @@ Está página consiste em reponder os questiónarios propostos ao decorrer do co
 Este primeiro exercício consistia em aprender os conceitos aprendidos sobre manipulação de pixels em uma imagem. Foi proposto que fosse implementado um programa chamdo regions.cpp. Esse programa deveria solicitar ao usuário as coordenadas de dois pontos P1 e P2, os quais são pontos opostos de um retângulo, localizados dentro dos limites do tamanho da imagem e fazer o negativo dessa imagem. 
 
 O código do programa que realiza a operação é dado a seguir.
-```css
+`
 regions.cpp
 
 #include <iostream>
@@ -71,7 +71,7 @@ int main(int argc, char**argv)
     waitKey();
     return 0;
 }
-```
+`
 
 ### Troca Regiões
 
