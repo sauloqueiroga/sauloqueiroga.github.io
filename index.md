@@ -2,7 +2,9 @@
 
 ## Introdução
 
-Está página consiste em reponder os questiónarios   propostos ao decorrer do componente curricular de processamento digital de imagens (PDI). Tais atividades consistem em fixar o conteúdo aprendido em sala e colocar as técnicas adiquiridas em prática.
+>Está página consiste em reponder os questiónarios propostos ao decorrer do componente curricular de processamento digital de
+>
+>imagens (PDI). Tais atividades consistem em fixar o conteúdo aprendido em sala e colocar as técnicas adiquiridas em prática.
 
 ## Atividade 2
 
