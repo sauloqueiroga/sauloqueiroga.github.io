@@ -11,7 +11,6 @@ Este primeiro exercício consistia em aprender os conceitos aprendidos sobre man
 
 O código do programa que realiza a operação é dado a seguir.
 ```
-
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -75,7 +74,7 @@ int main(int argc, char**argv)
 ### Troca Regiões
 
 O código do programa troca regiões é dado a seguir.
-```css
+```
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -131,7 +130,7 @@ int main(int argc, char**argv)
 ### Labeling
 
 Código do programa.
-```css
+```
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -213,7 +212,7 @@ O programa usa a os tons disponíveis de cinza para contar a quantidade de bolha
 
 Código do programa.
 
-```css
+```
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
