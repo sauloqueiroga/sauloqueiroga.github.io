@@ -11,7 +11,7 @@ Este primeiro exercício consistia em aprender os conceitos aprendidos sobre man
 
 O código do programa que realiza a operação é dado a seguir.
 `css
-`#include <iostream>`
+#include <iostream>
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
