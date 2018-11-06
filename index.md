@@ -7,7 +7,7 @@ Está página consiste em reponder os questiónarios propostos ao decorrer do co
 ## Atividade 2
 
 ### Regions
-Este primeiro exercício consistia em fixar os conceitos aprendidos sobre manipulação de pixels em uma imagem. Foi proposto que fosse implementado um programa chamado regions.cpp. Esse programa deveria solicitar ao usuário as coordenadas de dois pontos P1 e P2, os quais são pontos opostos de um retângulo, localizados dentro dos limites do tamanho da imagem e fazer o negativo dessa imagem. Para fazer o negativo de uma região, fazemos com que o pixel da posição (i,j) receba 255 - tonalidade do pixel atual.
+Este primeiro exercício consistia em fixar os conceitos aprendidos sobre manipulação de pixels em uma imagem. Foi proposto que fosse implementado um programa chamado regions.cpp. Esse programa deveria solicitar ao usuário as coordenadas de dois pontos P1 e P2, os quais são pontos opostos de um retângulo, localizados dentro dos limites do tamanho da imagem e fazer o negativo dessa imagem. Para fazer o negativo de uma região, fazemos com que o pixel da posição (i,j) receba 255, que é a tonalidade máxima, subtraído da tonalidade do pixel atual.
 
 O código do programa que realiza a operação é dado a seguir.
 ```cpp
