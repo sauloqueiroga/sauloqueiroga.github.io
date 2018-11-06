@@ -215,8 +215,8 @@ int main(int argc, char **argv){
 
 ### Equalize
 
-
-Código do programa.
+Na atividade 4 colocamos em prática a importância dos histogramas nas técnicas de processamento digital de imagens. No primeiro exercício da atividade 4, utilizou-se como base o programa histogram.cpp para implementar um programa que realizasse a equalização do histograma de uma imagem.
+Código do programa:
 
 ```cpp
 #include <iostream>
