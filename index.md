@@ -525,7 +525,8 @@ int main(int , char**){
 ```
 
 ## Atividade 8
-Nesta atividade, foi pedido para implementar um algoritmo baseado na técnica de pontilhismoe e no detecção de bordas por canny.
+
+Nesta atividade, foi pedido para implementar um algoritmo baseado na técnica impressionista de pontilhismo e na detecção de bordas pelo algoritmo de canny. Neste programa deveria realizar a técnica de pontilhismo atráves do algoritmo fornecido pontilhismo.cpp. Em seguida aplicaríamos o filtro de canny gerando e então acharíamos o efieto desejado. 
 
 O código do programa é dado a seguir.
 ```cpp
@@ -625,7 +626,7 @@ O código do programa é dado a seguir.
     }
   }
   
-  imshow("PontilhismoComCanny", Pontilhismo);
+  imshow("Pontilhismo Com Canny", Pontilhismo);
   imwrite("imagemPontilhistaComCanny.jpg", Pontilhismo);
 
 
