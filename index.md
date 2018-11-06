@@ -307,4 +307,4 @@ int main(int argc, char** argv){
 ```
 ## Atividade 7
 Nesta atividade foi proposto fazer um filtro homomórfico para corrigir os efeitos de uma má iluminação em uma imagem digital. Esse filtro tem por objetivod atenuar as baixas-frequências e realçar as altas. O filtro homomórfico funciona de uma forma que cada pixel da imagem pode ser separado em componentes distintas de iluminância e reflectância. A iluminância representa a quantidade de luz que incide sobre o pixel e apresenta variações lentas (baixas-frequências). Já a reflectância indica quanto dessa luz incidente é refletida, dependendo do material e apresentando variações mais rápidas (alta frequência). O filtro homomórfico pode ser descrito da seguinte maneira: 
-H(u,v)=(γH−γL)(1−e−c(D2(u,v)D20))+γLH(u,v)=(γH-γL)(1-e-c(D2(u,v)D02))+γL
+
