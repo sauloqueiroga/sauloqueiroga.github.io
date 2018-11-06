@@ -128,12 +128,15 @@ int main(int argc, char**argv)
 
 
 ## Atividade 3
+ 
+O programa base sugerido na atividade usa a os tons disponíveis de cinza para contar a quantidade de bolhas. No primeiro exercício desta atividade occorrerá um erro quando existir uma quantidade muito grande de regiões, pois há somente 255 tons,isto é, ocorrerá uma redundância nas contagem em caso haver mais de 255 bolhas. Uma solução seria ampliar a resolução, isto é, aumentar a quantidade de tons de cinza. Outra solução é usar uma imagem colorida ao invés de em tons de cinza.
 
-O programa usa a os tons disponíveis de cinza para contar a quantidade de bolhas. Como há somente 255 tons, ocorrerá uma redundância nas contagem em caso haver mais de 255 bolhas. Uma solução seria ampliar a resolução, isto é, aumentar a quantidade de tons de cinza. Outra solução é usar uma imagem colorida ao invés de em tons de cinza.
+
 
 ### Labeling
 
-Código do programa:
+No segundo exercício da atividade 3, foi proposto que trabalhássemos com o algoritmo de floodfill para contar a quantidade de de regiões com ou sem buracos contidos na imagem bolhas.png. Para realizar a contagem de tais regiões foi implementado o código a seguir.
+
 ```cpp
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -211,6 +214,7 @@ int main(int argc, char **argv){
 ## Atividade 4
 
 ### Equalize
+
 
 Código do programa.
 
