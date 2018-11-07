@@ -654,6 +654,7 @@ int main( int argc, char** argv ){
 
   Mat img = imread( "image.png", CV_LOAD_IMAGE_COLOR);
   Mat samples(img.rows * img.cols, 3, CV_32F);
+  
   for( int y = 0; y < img.rows; y++ ){
     for( int x = 0; x < img.cols; x++ ){
       for( int z = 0; z < 3; z++){
@@ -679,7 +680,7 @@ int main( int argc, char** argv ){
 	 }
   }
   imshow( "clustered image", rotulada );
-  imwrite("img/clustered.jpg", rotulada);
+  imwrite("image2.jpg", rotulada);
   waitKey( 0 );
 }
 ```
