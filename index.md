@@ -652,7 +652,7 @@ int main( int argc, char** argv ){
   int nRodadas = 1;
   Mat centros;
 
-  Mat img = imread( "img/gabi.jpg", CV_LOAD_IMAGE_COLOR);
+  Mat img = imread( "image.png", CV_LOAD_IMAGE_COLOR);
   Mat samples(img.rows * img.cols, 3, CV_32F);
   for( int y = 0; y < img.rows; y++ ){
     for( int x = 0; x < img.cols; x++ ){
