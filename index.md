@@ -680,7 +680,7 @@ int main( int argc, char** argv ){
 	 }
   }
   imshow( "clustered image", rotulada );
-  imwrite("image2.jpg", rotulada);
+  imwrite("image2.png", rotulada);
   waitKey( 0 );
 }
 ```
